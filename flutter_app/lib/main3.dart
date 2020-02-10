@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/Pantalla2.dart';
-import 'AppBarPantalla1.dart';
-import 'package:flutter_app/ContainerBody.dart';
-import 'package:flutter_app/CursosListView.dart';
-import 'package:flutter_app/curso.dart';
+import 'package:flutter_app/AppBarPantalla3.dart';
+import 'package:flutter_app/ContenidoPantalla3.dart';
 
 void main() => runApp(MyApp());
 
@@ -27,35 +24,18 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.cyan,
 
-
       ),
       home: Scaffold(
-        appBar: AppBar(
-          actions: <Widget>[
-
-          ],
-        ),
         body: Container(
           width: 415,
-          child: ListView(
+          child: Column(
             children: <Widget>[
-              AppbarPrincipal("Formación\nDocente"),
-              ContainerBody("   Mis Eventos ","Categoría"),
-              CursosListView(),
-              ContainerBody("   Este mes        ",""),
-              CursosListView(),
-              ContainerBody("   Marzo          ",""),
-              CursosListView(),
-              ContainerBody("   Abril              ",""),
-              CursosListView(),
+              AppbarPantalla3("Título del\nCurso"),
+              ContenidoTextoPantalla3("Breez Will & Deep Blue","Lorem ipsum dolor sit amet,")
             ],
           ),
         )
-      ),
-      initialRoute: "/",
-      routes: {
-        '/menu': (context) => Pantalla2()
-      },
+      )
     );
   }
 }
